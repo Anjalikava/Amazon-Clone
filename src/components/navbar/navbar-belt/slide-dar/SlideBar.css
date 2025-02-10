@@ -1,0 +1,52 @@
+/* Navigation bar */
+.nav {
+    @apply h-20 bg-[#232f3e] flex items-center justify-start px-5;
+}
+
+.menu-bars {
+    @apply text-white text-2xl no-underline cursor-pointer;
+}
+
+.menu-close {
+    @apply text-2xl m-2 no-underline text-white cursor-pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    @apply w-72 h-screen bg-[#232f3e] fixed top-0 left-[-100%] transition-all duration-[350] z-50 text-white overflow-y-auto;
+}
+
+.sidebar.active {
+    @apply left-0;
+}
+
+.sidebar-wrap {
+    @apply w-full p-2.5;
+}
+
+/* Sidebar items */
+.sidebar-item {
+    @apply p-2.5 border-b border-[#3a4553];
+}
+
+.sidebar-link {
+    @apply flex justify-between items-center no-underline text-white text-lg px-4 py-2;
+}
+
+.sidebar-link:hover {
+    @apply bg-[#25233e] rounded-md;
+}
+
+/* Nested dropdown */
+.dropdown-container {
+    @apply pl-5 bg-[#232f3e] rounded-md;
+}
+
+.sidebar-arrow {
+    @apply text-lg text-white;
+}
+
+/* Sidebar labels */
+.sidebar-label {
+    @apply ml-2.5;
+}
