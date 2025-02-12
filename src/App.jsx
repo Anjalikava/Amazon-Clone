@@ -1,19 +1,24 @@
-import AmazonClone from "./amazon";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import ProductData from "./product-details/Product-Data";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import { HomeScreen } from "./screen/home-screen/Home-Screen";
 
-
-
-
-function App() {
+const App = () => {
   return (
-     <div className="p-0 m-0 box-border">
-      {/* <AmazonClone/> */}
-       <Navbar />
-       <HomeScreen/>
-     </div>
+    <Router>
+      <div className="p-0 m-0 box-border">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/product-data" element={<ProductData />} />
+          {/* Redirect invalid paths to home */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

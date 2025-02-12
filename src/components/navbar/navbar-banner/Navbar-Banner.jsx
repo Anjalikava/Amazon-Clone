@@ -102,13 +102,13 @@ const NavbarBanner = () => {
             className=" category-dropdown"
           >
             <option value="aps">All</option>
-            <option value="aps">All Categories</option>
-            <option value="alexa-skills">Alexa Skills</option>
-            <option value="amazon-devices">Amazon Devices</option>
-            <option value="fashion">Amazon Fashion</option>
-            <option value="nowstore">Amazon Fresh</option>
-            <option value="amazon-pharmacy">Amazon Pharmacy</option>
-            <option value="appliances">Appliances</option>
+            <option value="aps"> Books</option>
+            <option value="alexa-skills">Faction Clothing</option>
+            <option value="amazon-devices">Electronicss</option>
+            <option value="fashion">Food & Grocery</option>
+            <option value="nowstore">Shopper Toolkit</option>
+            <option value="amazon-pharmacy">Health & Personal Care</option>
+            {/* <option value="appliances">Appliances</option>
             <option value="mobile-apps">Apps &amp; Games</option>
             <option value="audible">Audible Audiobooks</option>
             <option value="baby">Baby</option>
@@ -146,7 +146,7 @@ const NavbarBanner = () => {
             <option value="toys">Toys &amp; Games</option>
             <option value="under-ten-dollars">Under ₹500</option>
             <option value="videogames">Video Games</option>
-            <option value="watches">Watches</option>
+            <option value="watches">Watches</option> */}
           </select>
 
           {/* Hidden element to measure text width */}

@@ -6,39 +6,21 @@
     flex-direction: column;
     box-sizing: border-box;
     background-color: rgb(238, 235, 235);
-    position: relative; /* Make it a positioned element for the overlay */
 }
 
-.homeDetails::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color:[#F7FAFA]; /* Dark overlay */
-    z-index: 1; /* Make sure it appears on top */
-}
- 
-.homeDetails > * {
-    position: relative; /* Ensure inner elements are above the overlay */
-    z-index: 2;
-}
-
-.homeDetails {
-    padding-top: 40px; /* Add top padding */
-}
-.homeDetailLongCard{
+.homeDetailLongCard {
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
     background-color: white;
 }
-.homeDetailLongCardTitle{
+
+.homeDetailLongCardTitle {
     font-size: 21px;
     font-weight: 600;
 }
-.homeDetailLongCardItems{
+
+.homeDetailLongCardItems {
     margin-top: 10px;
     display: flex;
     gap: 10px;
@@ -48,21 +30,20 @@
     padding: 10px 0;
     overflow: hidden;
 }
-.scrollDiv{
+
+.scrollDiv {
     display: flex;
     width: 100%;
     gap: 15px;
     overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .scrollDiv::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
 
-.scrollDiv {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
 .homeDetailLongCardItem {
     display: flex;
     flex-shrink: 0;
@@ -111,45 +92,27 @@
     padding: 2px 0;
 }
 
-/* Media Queries for Responsiveness */
-
 @media (max-width: 1200px) {
     .homeDetailLongCardItem {
-        width: 23%;  /* Increase width for larger screens (tablets/desktop) */
+        width: 23%;
     }
 }
 
 @media (max-width: 992px) {
     .homeDetailLongCardItem {
-        width: 30%;  /* Adjust for medium screens */
+        width: 30%;
     }
 }
 
 @media (max-width: 768px) {
     .homeDetailLongCardItem {
-        width: 45%;  /* Adjust for smaller tablets */
-    }
-
-    .homeDetailLongCardItemImg {
-        width: 70%;  /* Adjust image size */
+        width: 45%;
     }
 }
 
 @media (max-width: 576px) {
     .homeDetailLongCardItem {
-        width: 100%;  /* Full width for mobile screens */
+        width: 100%;
         padding: 15px;
-    }
-
-    .homeDetailLongCardItemImg {
-        width: 100%;  /* Image takes full width */
-    }
-
-    .homeDetailPercentageOff {
-        font-size: 10px;  /* Smaller font on small screens */
-    }
-
-    .bottomHomeDetail {
-        font-size: 10px;  /* Adjust text size */
     }
 }
