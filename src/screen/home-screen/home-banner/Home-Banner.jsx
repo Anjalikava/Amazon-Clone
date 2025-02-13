@@ -56,7 +56,7 @@ const HomeBanner = () => {
                 )}
             </div>
 
-            <div className='pb-64 bg-[#EEEBEB]'>
+            <div className='pb-60 bg-[#EEEBEB]'>
                 <div className={`bannerOverlay ${overlayVisible ? 'visible' : ''}`} >
                     <span className="homeBannerInfo">
                         You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
