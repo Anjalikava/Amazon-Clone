@@ -7,9 +7,13 @@ import offers from "../../../TodayOffers.json";
 export const HomeDetails = () => {
   const navigate = useNavigate();
 
-  // Function to handle product click
+  // Function to handle navigation
   const handleProductClick = (id, type) => {
-    navigate(`/product/${id}?type=${type}`);
+    if (type === "deals") {
+      navigate(`/product/${id}`); // Navigates to ProductDetails.js
+    } else if (type === "offers") {
+      navigate(`/offer/${id}`); // Navigates to OfferDetails.js
+    }
   };
 
   return (
@@ -61,7 +65,7 @@ export const HomeDetails = () => {
                 />
                 <div className="homeDetailLongCardItemImgDetail">
                   <div className="homeDetailLongCardItemImgTopDetail">
-                    <div className="homeDetailPercentageOff">{offer.discount}</div>
+                    <div className="homeDetailPercentageOff">{offer.discount} Off</div>
                     <div className="limitedTimeDealhomeDetail">{offer.deal}</div>
                   </div>
                   <div className="bottomHomeDetail">{offer.description}</div>

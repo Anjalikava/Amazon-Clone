@@ -158,3 +158,55 @@
   margin-top: 40px; /* Adjust to prevent overlap */
   position: relative;
 }
+
+
+@media screen and (max-width: 720px) {
+  .homeBannerItemDiv {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Two columns */
+    grid-auto-rows: auto; /* Flexible row height */
+   
+    padding: 20px;
+    /* padding-left: 50px; */
+    padding-top: 10%;
+    padding-bottom: 150%;
+    background-color:#e5e7eb;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: auto; /* Enables scrolling in both directions */
+    scroll-behavior: smooth;
+  }
+
+  .homeBannerItemDivCard {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    height: 330px;
+    width: 250px; /* Fixed card width */
+    scroll-snap-align: center; /* Snap effect when scrolling */
+  }
+
+  .homeBannerItemDivCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .homeBannerItemDivCardTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+}
+
+
+
+
+
