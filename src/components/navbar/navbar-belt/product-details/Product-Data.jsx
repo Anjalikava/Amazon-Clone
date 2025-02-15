@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Star } from "lucide-react";
-import Footer from "../modules/footer/Footer";
-import categories from "../product-details/Categories";
+import Footer from "../../../../modules/footer/Footer";
+import categories from "./Categories";
 
 const AmazonProductPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [wishlist, setWishlist] = useState({});
   const location = useLocation();
 
   useEffect(() => {
@@ -17,6 +18,13 @@ const AmazonProductPage = () => {
     }
   }, [location]);
 
+  const toggleWishlist = (index) => {
+    setWishlist((prev) => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   return (
     <>
       <div className="container mx-auto p-4">
@@ -25,7 +33,13 @@ const AmazonProductPage = () => {
             <h2 className="text-xl font-bold mb-2 capitalize">{selectedCategory.replace("-", " ")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {categories[selectedCategory].map((product, index) => (
-                <div key={index} className="border p-4 rounded-lg shadow">
+                <div key={index} className="border p-4 rounded-lg shadow relative">
+                  <button 
+                    className="absolute top-2 right-2 text-2xl focus:outline-none"
+                    onClick={() => toggleWishlist(index)}
+                  >
+                    {wishlist[index] ? "❤️" : "🤍"}
+                  </button>
                   <div className="w-64 h-64 flex justify-center items-center overflow-hidden">
                     <img src={product.images[0]} alt={product.title} className="object-contain w-full h-full rounded-lg" />
                   </div>

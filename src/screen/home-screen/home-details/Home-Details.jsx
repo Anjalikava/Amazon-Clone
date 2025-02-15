@@ -48,7 +48,7 @@ export const HomeDetails = () => {
       </div>
 
       {/* Today’s Offers Section */}
-      <div className="homeDetailLongCard ">
+      <div className="homeDetailLongCard">
         <div className="homeDetailLongCardTitle">Today’s Offers</div>
         <div className="homeDetailLongCardItems">
           <div className="scrollDiv">

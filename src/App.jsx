@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Navbar from "./components/navbar/Navbar";
 import HomeBanner from "./screen/home-screen/home-banner/Home-Banner";
 import HomeDetails from "./screen/home-screen/home-banner/Home-Banner-Click-Products";
-import ProductData from "./product-details/Product-Data";
+import ProductData from "./components/navbar/navbar-belt/product-details/Product-Data";
 import HomeProductDetails from "./screen/home-screen/home-details/Home-Product-Details";
 import OfferDetails from "./screen/home-screen/home-details/Home-product-Offers";
 import { HomeScreen } from "./screen/home-screen/Home-Screen";

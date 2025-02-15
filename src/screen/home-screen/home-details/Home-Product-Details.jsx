@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import productData from "../../../ToDaysDails.json";
 import offers from "../../../TodayOffers.json";
@@ -6,6 +6,7 @@ import offers from "../../../TodayOffers.json";
 const HomeProductDetails = () => {
   const { id } = useParams();
   const productId = Number(id);
+  const [wishlist, setWishlist] = useState(false);
 
   // Find product in either deals or offers
   const product = productData.find((item) => Number(item.id) === productId) ||
@@ -15,8 +16,21 @@ const HomeProductDetails = () => {
     return <h2 className="text-center text-red-500 text-2xl mt-10">Product Not Found</h2>;
   }
 
+  // Toggle Wishlist
+  const toggleWishlist = () => {
+    setWishlist((prev) => !prev);
+  };
+
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-gray-50 rounded-lg shadow mt-10">
+    <div className="max-w-4xl mx-auto p-6 bg-gray-50 rounded-lg shadow mt-10 relative">
+      {/* Wishlist Icon */}
+      <button 
+        className="absolute top-4 right-4 text-2xl focus:outline-none"
+        onClick={toggleWishlist}
+      >
+        {wishlist ? "❤️" : "🤍"}
+      </button>
+
       <h1 className="text-2xl font-bold mb-4">{product.title || product.description}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="w-full h-80 flex justify-center items-center overflow-hidden">

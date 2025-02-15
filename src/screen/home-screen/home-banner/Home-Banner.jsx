@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home-Banner.css';
-import homeBannerItemProduct from '../../../products/Home-Banner-Product.json';
+import homeBannerItemProduct from '../../../components/navbar/navbar-belt/products/Home-Banner-Product.json';
 
 const bannerImages = [
     'https://m.media-amazon.com/images/I/71WanO2aWEL._SX3000_.jpg',
