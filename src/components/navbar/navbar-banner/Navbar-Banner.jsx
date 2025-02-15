@@ -8,7 +8,6 @@ import { useState, useEffect, useRef } from "react";
 const NavbarBanner = () => {
   // State to toggle the menu
   const [menuOpen, setMenuOpen] = useState(false);
-
   // Toggle menu visibility
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const [selectedText, setSelectedText] = useState("All");
@@ -99,54 +98,21 @@ const NavbarBanner = () => {
           <select
             ref={selectRef}
             onChange={handleChange}
-            className=" category-dropdown"
-          >
+            className=" category-dropdown">
             <option value="aps">All</option>
-            <option value="aps"> Books</option>
-            <option value="alexa-skills">Faction Clothing</option>
-            <option value="amazon-devices">Electronicss</option>
-            <option value="fashion">Food & Grocery</option>
-            <option value="nowstore">Shopper Toolkit</option>
-            <option value="amazon-pharmacy">Health & Personal Care</option>
-            {/* <option value="appliances">Appliances</option>
-            <option value="mobile-apps">Apps &amp; Games</option>
-            <option value="audible">Audible Audiobooks</option>
-            <option value="baby">Baby</option>
-            <option value="beauty">Beauty</option>
-            <option value="stripbooks">Books</option>
-            <option value="automotive">Car &amp; Motorbike</option>
-            <option value="apparel">Clothing &amp; Accessories</option>
-            <option value="collectibles">Collectibles</option>
-            <option value="computers">Computers &amp; Accessories</option>
-            <option value="todays-deals">Deals</option>
-            <option value="electronics">Electronics</option>
-            <option value="furniture">Furniture</option>
-            <option value="lawngarden">Garden &amp; Outdoors</option>
+            <option value="your-account"> Your Account</option>
+            <option value="customer-service">Customer Service</option>
+            <option value="track-orders">Track Orders</option>
+            <option value="returns-refunds">Returns & Refunds</option>
+            <option value="buy-again">Buy Again</option>
+            <option value="join-prime">Join Prime</option>
+            <option value="prime-video">Prime Video</option>
+            <option value="exclusive-deals">Exclusive Deals</option>
+            <option value="shopping-list">Shopping List</option>
+            <option value="gift-ideas">Gift Ideas</option>
             <option value="gift-cards">Gift Cards</option>
-            <option value="grocery">Grocery &amp; Gourmet Foods</option>
-            <option value="hpc">Health &amp; Personal Care</option>
-            <option value="kitchen">Home &amp; Kitchen</option>
-            <option value="industrial">Industrial &amp; Scientific</option>
-            <option value="jewelry">Jewellery</option>
-            <option value="digital-text">Kindle Store</option>
-            <option value="luggage">Luggage &amp; Bags</option>
-            <option value="luxury-beauty">Luxury Beauty</option>
-            <option value="dvd">Movies &amp; TV Shows</option>
-            <option value="digital-music">MP3 Music</option>
-            <option value="popular">Music</option>
-            <option value="mi">Musical Instruments</option>
-            <option value="office-products">Office Products</option>
-            <option value="pets">Pet Supplies</option>
-            <option value="instant-video">Prime Video</option>
-            <option value="shoes">Shoes &amp; Handbags</option>
-            <option value="software">Software</option>
-            <option value="sporting">Sports, Fitness &amp; Outdoors</option>
-            <option value="specialty-aps-sns">Subscribe &amp; Save</option>
-            <option value="home-improvement">Tools &amp; Home Improvement</option>
-            <option value="toys">Toys &amp; Games</option>
-            <option value="under-ten-dollars">Under ₹500</option>
-            <option value="videogames">Video Games</option>
-            <option value="watches">Watches</option> */}
+            <option value="payment-methods">Payment Methods</option>
+            <option value="coupons">Coupons</option>
           </select>
 
           {/* Hidden element to measure text width */}

@@ -1,12 +1,21 @@
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const HomeBannerClickProducts = () => {
     const location = useLocation();
     const selectedProduct = location.state?.product || null;
+    const [wishlist, setWishlist] = useState({});
 
     if (!selectedProduct) {
         return <p className="text-center text-red-500">No product data available.</p>;
     }
+
+    const toggleWishlist = (index) => {
+        setWishlist((prev) => ({
+            ...prev,
+            [index]: !prev[index]
+        }));
+    };
 
     return (
         <div className="max-w-6xl mx-auto p-6 bg-gray-50 rounded-lg shadow mt-10">
@@ -16,7 +25,15 @@ const HomeBannerClickProducts = () => {
             {/* Image Grid Section */}
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {selectedProduct.imgs.map((img, index) => (
-                    <div key={index} className="p-4 bg-white rounded-lg shadow flex flex-col items-center">
+                    <div key={index} className="p-4 bg-white rounded-lg shadow flex flex-col items-center relative">
+                        {/* Wishlist Icon */}
+                        <button 
+                            className="absolute top-2 right-2 text-2xl focus:outline-none"
+                            onClick={() => toggleWishlist(index)}
+                        >
+                            {wishlist[index] ? "❤️" : "🤍"}
+                        </button>
+                        
                         <img 
                             src={img.url} 
                             alt={img.name} 
