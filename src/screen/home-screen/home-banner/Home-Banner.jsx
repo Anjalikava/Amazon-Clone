@@ -59,8 +59,28 @@ const HomeBanner = () => {
             <div className='pb-60 bg-[#EEEBEB]'>
                 <div className={`bannerOverlay ${overlayVisible ? 'visible' : ''}`} >
                     <span className="homeBannerInfo">
-                        You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
+                        You are on {""}
+                        <a
+                            href="https://www.amazon.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 border-b-2 border-blue-600 hover:text-blue-800"
+                        >
+                            amazon.com
+                        </a>
+                        {""} You can also shop on {""}
+                        <a
+                            href="https://www.amazon.in"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 border-b-2 border-blue-600 hover:text-blue-800"
+                        >
+                            amazon.india
+                        </a>
+                      {""}  for millions of products with fast local delivery.
                     </span>
+
+
                     <div className="homeBannerItemDiv">
                         {homeBannerItemProduct.product.map((item, ind) => (
                             <div key={ind}>

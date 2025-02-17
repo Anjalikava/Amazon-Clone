@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const wishlist = () => {
+export const AddToCart = () => {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">Wise List</h2>
+      <h2 className="text-xl font-semibold mb-4">Add to Cart List</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
@@ -39,4 +39,4 @@ export const wishlist = () => {
   );
 };
 
-export default wishlist;
+export default AddToCart;

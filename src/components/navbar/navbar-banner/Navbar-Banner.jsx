@@ -5,6 +5,12 @@ import AmazonLogo from "../../../assets/amazonLogo.png";
 import "./Navbar-Banner.css";
 import LanguageDropdown from "./language-drop-down/Language-Drop-Down";
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
 const NavbarBanner = () => {
   // State to toggle the menu
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,12 +30,14 @@ const NavbarBanner = () => {
   const handleChange = (e) => {
     setSelectedText(e.target.options[e.target.selectedIndex].text);
   };
+
+  const navigate = useNavigate();
   return (
     <div className="navbar-banner">
       <div className="navbar-container">
         {/* Logo */}
         <div className="logo-container">
-          <img src={AmazonLogo} alt="Amazon Logo" className="logo-image" />
+          <img src={AmazonLogo} alt="Amazon Logo" className="logo-image"></img>
           <span className=" md:inline">.in</span>
         </div>
 
@@ -71,7 +79,7 @@ const NavbarBanner = () => {
                 <p className="font-extrabold md:text-sm text-sm">& Orders</p>
               </div>
             </div>
-            <div className="menu-item">
+            <div className="menu-item" onClick={() => navigate("/cart")}>
               <div className="basket-section link">
                 <span className="basket-count text-sm">0</span>
                 <ShoppingCart className="basket-icon" />
@@ -157,10 +165,10 @@ const NavbarBanner = () => {
             <p className="text-sm">Returns</p>
             <p className="font-extrabold md:text-sm text-sm">& Orders</p>
           </div>
-          <div className="basket-section link">
+          <div className="basket-section link" onClick={() => navigate("/cart")}>
             <span className="basket-count text-sm">0</span>
             <ShoppingCart className="basket-icon" />
-            <p className="basket-text text-sm">Cart</p>
+            <p className="basket-text text-sm" >Cart</p>
           </div>
         </div>
       </div>

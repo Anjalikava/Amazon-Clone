@@ -8,6 +8,8 @@ import HomeProductDetails from "./screen/home-screen/home-details/Home-Product-D
 import OfferDetails from "./screen/home-screen/home-details/Home-product-Offers";
 import { HomeScreen } from "./screen/home-screen/Home-Screen";
 import "./App.css";
+import WiseList from "./components/navbar/navbar-belt/slide-dar/slidebar-datafiles/yourlist/WiseList";
+import AddToCart from "./components/navbar/navbar-banner/cart/cart";
 
 const App = () => {
     return (
@@ -18,7 +20,9 @@ const App = () => {
                     <Route path="/" element={<HomeScreen />} />
                     <Route path="/home-banner" element={<HomeBanner />} />
                     <Route path="/home-details" element={<HomeDetails />} />
+                    <Route path="/cart" element={<AddToCart/>}/>
                     <Route path="/product-data" element={<ProductData />} />
+                    <Route path="/your-lists/wish-list" element={<WiseList />} />
                     <Route path="/product/:id" element={<HomeProductDetails />} />
                     <Route path="/offer/:id" element={<OfferDetails />} />
                     <Route path="*" element={<Navigate to="/" />} />
