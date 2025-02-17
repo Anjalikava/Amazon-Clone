@@ -41,19 +41,7 @@ const OfferDetails = () => {
         </div>
       </div>
 
-      {/* All Show Section */}
-      <div className="mt-10">
-        <h2 className="text-xl font-bold mb-4">All Offers</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {offers.map((item) => (
-            <div key={item.id} className="p-4 bg-white rounded-lg shadow">
-              <img src={item.imageUrl} alt={item.description} className="w-full h-40 object-contain rounded-lg" />
-              <p className="text-sm font-bold mt-2">{item.description}</p>
-              <p className="text-green-600 text-sm font-bold">{item.discount} Off</p>
-            </div>
-          ))}
-        </div>
-      </div>
+    
     </div>
   );
 };
