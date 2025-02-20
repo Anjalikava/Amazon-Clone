@@ -40,8 +40,6 @@ const OfferDetails = () => {
           </div>
         </div>
       </div>
-
-    
     </div>
   );
 };
